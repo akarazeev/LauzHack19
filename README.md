@@ -22,9 +22,7 @@ From setting up a patient's risk profile to visualizating the likelihood of viru
 	* Interactive MVP [@Yann21]
 
 ### Pipeline
-* Back-end:
-
-![Flowchart](img/flowchart.png)
+![Flowchart](img/flowchart_backend.png)
 
 ```mermaid
 graph LR
@@ -35,7 +33,7 @@ E --> D
 C --> D(Interface)
 ```
 
-* Production:
+![Flowchart](img/flowchart_production.png)
 ```mermaid
 graph LR
 A(Custom algorithm) --> B(Cloud DB)
