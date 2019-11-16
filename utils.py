@@ -3,7 +3,7 @@ from Bio import Align
 import os
 
 
-def load_patients(root_data='dataset_cp_pt_brain_dna/DNA'):
+def load_patients(root_data='data/dataset_cp_pt_brain_dna/DNA'):
     patients = dict()
     for f in [f for f in os.listdir(root_data) if f.endswith('fastq')]:
         print(f, end="\t... ")
@@ -12,7 +12,7 @@ def load_patients(root_data='dataset_cp_pt_brain_dna/DNA'):
     return patients
     
     
-def load_viruses(root_data='viral'):
+def load_viruses(root_data='data/viral'):
     viruses = dict()
     for f in [f for f in os.listdir(root_data) if f.endswith('fna')]:
         print(f, end="\t...")
