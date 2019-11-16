@@ -1,5 +1,7 @@
 # LauzHack 2019
-![biopython](https://biopython.org/assets/images/biopython_logo_s.png =100x) ![biopython](https://biopython.org/assets/images/biopython_logo_s.png =100x) ![biopython](https://biopython.org/assets/images/biopython_logo_s.png =100x)
+<img src="https://biopython.org/assets/images/biopython_logo_s.png" data-canonical-src="https://biopython.org/assets/images/biopython_logo_s.png" width="100" height="80" /><img src="https://biopython.org/assets/images/biopython_logo_s.png" data-canonical-src="https://biopython.org/assets/images/biopython_logo_s.png" width="100" height="80" /><img src="https://biopython.org/assets/images/biopython_logo_s.png" data-canonical-src="https://biopython.org/assets/images/biopython_logo_s.png" width="100" height="80" />
+<>![biopython](https://biopython.org/assets/images/biopython_logo_s.png =100x) ![biopython](https://biopython.org/assets/images/biopython_logo_s.png =100x) ![biopython](https://biopython.org/assets/images/biopython_logo_s.png =100x)
+
 As part of the 2019 edition of **LauzHack**, our team has chosen to work on **genomic processing**. This project aims at creating value by substantially streamlining the genomic analysis of patients in a visual and efficient manner.
 
 The way we achieve is by focusing on a pairwise comparison of DNA sequences as well as providing an interactive interface for practitioners.
@@ -13,12 +15,14 @@ From setting up a patient's risk profile to visualizating the likelihood of viru
 	* Cross correlation analysis
 * Visualization
 	* **Tree-of-life** relations
-	ie: ![biopython](https://cbsnews1.cbsistatic.com/hub/i/2015/09/21/5816af3f-b563-433f-871c-eb1dabeea491/9efe7bb53aec2efc91071bf1841074b4/tree-of-life-fig1620w.jpg =100x)
+	ie: <img src="https://cbsnews1.cbsistatic.com/hub/i/2015/09/21/5816af3f-b563-433f-871c-eb1dabeea491/9efe7bb53aec2efc91071bf1841074b4/tree-of-life-fig1620w.jpg" data-canonical-src="https://cbsnews1.cbsistatic.com/hub/i/2015/09/21/5816af3f-b563-433f-871c-eb1dabeea491/9efe7bb53aec2efc91071bf1841074b4/tree-of-life-fig1620w.jpg" width="50" height="50" />
 	* Superimposition of histograms
 	* Interactive MVP [@Yann]
 
 ### Pipeline
 * Back-end:
+
+![Flowchart](https://github.com/akarazeev/LauzHack19/tree/master/ui/res/flowchart.png)
 
 ```mermaid
 graph LR
