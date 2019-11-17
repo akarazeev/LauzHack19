@@ -31,3 +31,16 @@ def load_viruses(root_data='data/viral'):
             print(" Done.")
     return viruses
 
+
+def compute_virus_alignment_score(patients_entries, virus_dna, aligner):
+    alignments_scores = np.zeros(patients_entries.shape[0])
+
+    if len(virus_dna) != 0:
+        for i, patient_dna in enumerate(patients_entries):
+            if len(patient_dna) != 0:
+                alignments = aligner.align(patient_dna, virus_dna)
+                alignments_scores[i] = alignments.score
+            else:
+                alignments_scores[i] = 0
+
+    return alignments_scores
