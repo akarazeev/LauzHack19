@@ -16,21 +16,6 @@ from utils import load_patients, load_viruses, compute_virus_alignment_score
 
 plt.ioff()
 
-EXPLANATION = """\
-<div class="app-sidebar">
-<p><em>Compare different development indicators.</em><p>
-
-<p>Select what indicators to plot in the dropdowns, and use the slider
-to sub-select a fraction of years to include in the plot.</p>
-
-<p>Data and idea copied from the <a href="https://dash.plot.ly/getting-started-part-2">
-Plotly Dash documentation</a>.</p>
-
-<p>This example demonstrates combining matplotlib with Jupyter widgets. For more interactive plots,
-consider using <a href="https://github.com/bloomberg/bqplot">bqplot</a>.
-</div>
-"""
-
 HTML("""\
 <style>
 .app-subtitle {
@@ -77,21 +62,21 @@ class App:
             widgets.HTML(
                 (
                     '<h1>Development indicators</h1>'
-                    '<h2 class="app-subtitle"><a href="https://github.com/pbugnion/voila-gallery/blob/master/country-indicators/index.ipynb">Link to code</a></h2>'
+                    '<h1> </h1>'
+                    '<h3>Select virus of interest</h3>'
                 ),
                 layout=widgets.Layout(margin='0 0 2em 0')
             ),
             widgets.HBox([
                 _app_container,
-                widgets.HTML(EXPLANATION, layout=widgets.Layout(margin='0 0 0 2em'))
             ])
         ], layout=widgets.Layout(flex='1 1 auto', margin='0 auto 0 auto', max_width='1024px'))
 
         # Loading and preprocessing data.
-        # n_viruses = 5
-        # n_entries = 10
-        n_viruses = 87
-        n_entries = 100
+        n_viruses = 5
+        n_entries = 10
+        # n_viruses = 87
+        # n_entries = 100
 
         viruses_full = load_viruses()
         patients_identity_full, patients_entries_full = load_patients()
@@ -160,7 +145,7 @@ class App:
             else:
                 patients_points.append(0)
 
-        plt.figure(num=None, figsize=(15, 10), dpi=80, facecolor='w', edgecolor='k')
+        plt.figure(num=None, figsize=(15, 10), dpi=250, facecolor='w', edgecolor='k')
         min_max_x = (-0.05, len(patients_points) - 1 + 0.05)
 
         last_v = 0
@@ -173,7 +158,6 @@ class App:
         for x, (name, y) in enumerate(zip(patient_keys, patients_points)):
             plt.annotate(name, (x + 0.05, y))
         plt.xlim(*min_max_x)
-        plt.title(virus_to_look)
         plt.legend()
 
     def _create_indicator_dropdown(self, indicators, initial_index):

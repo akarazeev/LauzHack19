@@ -20,6 +20,10 @@ From setting up a patient's risk profile to visualizating the likelihood of viru
 	i.e.: <img src="https://cbsnews1.cbsistatic.com/hub/i/2015/09/21/5816af3f-b563-433f-871c-eb1dabeea491/9efe7bb53aec2efc91071bf1841074b4/tree-of-life-fig1620w.jpg" width="20%"/>
 	* Superimposition of histograms
 	* Interactive MVP [@Yann21]
+	
+![](img/heatmap.png)
+
+![](img/hist.png)
 
 ### Pipeline
 ![Flowchart](img/flowchart_backend.png)
